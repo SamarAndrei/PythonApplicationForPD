@@ -16,16 +16,16 @@ def ResValue():
 
 	if k_value != '' and h_value != '' and Pk_value != '' and Ps_value != '' and μ_value != '' and Rk_value != '' and Rs_value != '' and (((float(μ_value) * math.log(float(Rk_value) * float(Rs_value)))) != 0) and float(Rk_value) != 0 and float(Rs_value) != 0: 
 		Qr = 2 * math.pi * float(k_value) * float(h_value) * (float(Pk_value) - float(Ps_value)) / ((float(μ_value) * math.log(float(Rk_value) * float(Rs_value))))
-		labelRes = tk.Label(text = "Дебит скважины = " +  str(round(Qr,3)), fg = 'black', font = (5), bg = '#708090')
+		labelRes = tk.Label(text = "Дебит скважины = " +  str(round(Qr,3)), fg = '#82c7a5', font = (5), bg = '#1b212c')
 		labelRes.pack()
 	else:	
-		labelError = tk.Label(text = "Неверно введены данные либо деление на ноль",fg = 'black', font = 20, bg = '#708090')
+		labelError = tk.Label(text = "Неверно введены данные либо деление на ноль",fg = 'black', font = 20, bg = '#1b212c')
 		labelError.pack()
 
 win = tk.Tk()
 win.title("Калькулятор для моделирования притока")
 win.geometry("600x500+700+300")
-win['bg'] = '#708090'
+win['bg'] = '#1b212c'
 win.resizable(False, False)
 photo = tk.PhotoImage(file = "Капля.png")
 win.iconphoto(False, photo)
@@ -46,19 +46,19 @@ Rk.pack()
 Rs = tk.Entry(win)
 Rs.pack()
 
-labelk = tk.Label(win, text="Коэффициент проницаемости:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Коэффициент проницаемости:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=20, y=0)
-labelk = tk.Label(win, text="Мощность пласта:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Мощность пласта:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=100, y=18)
-labelk = tk.Label(win, text="Давление на контуре питания:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Давление на контуре питания:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=5, y=37)
-labelk = tk.Label(win, text="Давление в скважине:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Давление в скважине:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=68, y=55)
-labelk = tk.Label(win, text="Вязкость жидкости:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Вязкость жидкости:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=84, y=75)
-labelk = tk.Label(win, text="Радиус контура питания:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Радиус контура питания:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=44, y=94)
-labelk = tk.Label(win, text="Радиус скважины:", bg = '#708090', font = ('Courier New',10))
+labelk = tk.Label(win, text="Радиус скважины:", bg = '#1b212c',fg = 'white', font = ('Courier New',10))
 labelk.place(x=100, y=113)
 
 
