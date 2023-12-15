@@ -47,21 +47,10 @@ def Help():
 	labelInfo.pack()
 	#btnHelpC = tk.Button(winH, text = "Закрыть", font = (5), bd = 3, activebackground = "grey", command = close_winH)
 	#btnHelpC.place(x = 300, y = 150)
-	winH.mainloop()
+	#winH.mainloop()
 	
-
-
 def close_win():
 	win.destroy()
-
-
-
-def close_winH():
-	winH.destroy()
-
-
-
-
 
 win = tk.Tk()
 win.title("Калькулятор для моделирования притока")
